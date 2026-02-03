@@ -1,4 +1,4 @@
-package com.telusko.ecom_proj.repo;
+package com.mj.ecom_proj.repo;
 
 import com.telusko.ecom_proj.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface ProductRepo extends JpaRepository<Product, Integer> {
 
-    @Query("SELECT p from Product p WHERE "+
+    @Query("SELECT p from Product p WHERE " +
             "LOWER(p.name) LIKE LOWER(CONCAT('%', :keyword, '%')) OR " +
             "LOWER(p.description) LIKE LOWER(CONCAT('%', :keyword, '%')) OR " +
             "LOWER(p.brand) LIKE LOWER(CONCAT('%', :keyword, '%')) OR " +
