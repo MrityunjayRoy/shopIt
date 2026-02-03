@@ -1,4 +1,4 @@
-package com.telusko.ecom_proj.model;
+package com.mj.ecom_proj.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
@@ -32,6 +32,5 @@ public class Product {
     private String imageType;
     @Lob
     private byte[] imageDate;
-
 
 }
